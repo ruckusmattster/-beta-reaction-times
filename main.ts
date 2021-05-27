@@ -7,11 +7,11 @@ input.onButtonPressed(Button.A, function () {
         running = false
         end = input.runningTime()
         basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
+            # . . . .
             `)
         basic.pause(1000)
         basic.showLeds(`
@@ -22,6 +22,7 @@ input.onButtonPressed(Button.A, function () {
             . . . . .
             `)
         basic.showNumber(end - start)
+        basic.showString("MS")
     } else {
         false_start = true
         basic.showLeds(`
@@ -46,7 +47,13 @@ input.onButtonPressed(Button.AB, function () {
         running = true
         led.stopAnimation()
         basic.clearScreen()
-        led.plot(randint(0, 4), randint(0, 4))
+        basic.showLeds(`
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            # # # # #
+            `)
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -54,14 +61,22 @@ input.onButtonPressed(Button.B, function () {
         running = false
         end = input.runningTime()
         basic.showLeds(`
-            . . . # #
-            . . . # #
-            . . . # #
-            . . . # #
-            . . . # #
+            . . . . #
+            . . . . #
+            . . . . #
+            . . . . #
+            . . . . #
             `)
         basic.pause(1000)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            `)
         basic.showNumber(end - start)
+        basic.showString("MS")
     } else {
         false_start = true
         basic.showLeds(`
