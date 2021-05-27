@@ -7,11 +7,11 @@ input.onButtonPressed(Button.A, function () {
         running = false
         end = input.runningTime()
         basic.showLeds(`
-            # # . . .
-            # # . . .
-            # # . . .
-            # # . . .
-            # # . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
             `)
         basic.pause(1000)
         basic.showLeds(`
