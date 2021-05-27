@@ -21,7 +21,7 @@ input.onButtonPressed(Button.A, function () {
             . . . . .
             . . . . .
             `)
-        basic.showNumber(end - start)
+        proportionalFont.showNumber(end - start, 150)
         basic.showString("MS")
     } else {
         false_start = true
