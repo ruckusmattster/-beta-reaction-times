@@ -29,9 +29,7 @@ input.onButtonPressed(Button.A, function () {
             `)
         proportionalFont.showNumber(end - start, 150)
         basic.showString("MS")
-        if (end - start < 350) {
-            score_a += 1
-        }
+        ponts()
     } else {
         false_start = true
         basic.showLeds(`
@@ -44,6 +42,23 @@ input.onButtonPressed(Button.A, function () {
         score_a += -1
     }
 })
+function ponts () {
+    if (end - start > 350) {
+        score_a += 0
+    }
+    if (end - start < 250) {
+        score_a += 3
+    }
+    if (end - start < 180) {
+        score_a += 4
+    }
+    if (end - start < 100) {
+        score_a += 2
+    }
+    if (end - start < 50) {
+        score_a += 4
+    }
+}
 input.onButtonPressed(Button.AB, function () {
     basic.showNumber(3)
     basic.showNumber(2)
@@ -66,6 +81,23 @@ input.onButtonPressed(Button.AB, function () {
             `)
     }
 })
+function ponts2 () {
+    if (end - start > 350) {
+        score_b += 0
+    }
+    if (end - start < 250) {
+        score_b += 3
+    }
+    if (end - start < 180) {
+        score_b += 4
+    }
+    if (end - start < 100) {
+        score_b += 2
+    }
+    if (end - start < 50) {
+        score_b += 4
+    }
+}
 input.onButtonPressed(Button.B, function () {
     if (running) {
         running = false
@@ -87,9 +119,7 @@ input.onButtonPressed(Button.B, function () {
             `)
         basic.showNumber(end - start)
         basic.showString("MS")
-        if (end - start < 350) {
-            score_b += 1
-        }
+        ponts2()
     } else {
         false_start = true
         basic.showLeds(`
